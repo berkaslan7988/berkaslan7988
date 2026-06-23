@@ -31,6 +31,27 @@ Currently working on **cybersecurity** & **software development** — from crypt
 
 ---
 
+## 📡 Latest Release — `NetScope`
+
+> *Wi-Fi monitoring, analysis & defensive security — Windows desktop / Windows masaüstü için Wi-Fi izleme, analiz & savunma odaklı güvenlik*
+
+```
+Python + PySide6 (Qt)  —  native WLAN API (ctypes)  —  SQLite  —  single-file .exe
+```
+
+| Feature / Özellik | Details / Detaylar |
+|-------------------|--------------------|
+| 📶 Live scanning | Real RSSI via the native WLAN API, color-coded security, signal sparklines |
+| 📊 Analytics | Signal-over-time charts, channel congestion scoring, best-channel advice |
+| 🌐 LAN discovery | Device map, TCP port/service scan, bandwidth — *your own network only* |
+| 🛡️ Security | Evil-twin / rogue-AP detection, per-network risk score, live alerts |
+| 💾 History & reports | Persistent SQLite history + one-click CSV / PDF export |
+| 🎨 UX | Dark/Light themes · real IEEE OUI vendor DB · 65 unit tests |
+
+🔗 [**berkaslan7988/NetScope**](https://github.com/berkaslan7988/NetScope)
+
+---
+
 ## 🗂️ Featured Project — `perfect_victory`
 
 > *33 projects / proje · 5 difficulty levels / zorluk seviyesi · Cryptography → Autonomous AI Agent / Kriptografiden Otonom AI Agent'a*
@@ -49,7 +70,7 @@ A self-designed curriculum. / Kendi kendime tasarladığım bir müfredat.
 
 ---
 
-## 📱 Latest Release — `Person AI`
+## 📱 Release — `Person AI`
 
 > *Multi-character AI chat app for Android / Android için çok karakterli yapay zeka sohbet uygulaması*
 
@@ -82,9 +103,13 @@ Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included 
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" width="50" height="50" alt="Flask" title="Flask"/>
   &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" width="50" height="50" alt="Qt / PySide6" title="Qt / PySide6"/>
+  &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="50" height="50" alt="Flutter / Flet" title="Flutter / Flet"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" width="50" height="50" alt="Rust" title="Rust"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg" width="50" height="50" alt="SQLite" title="SQLite"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" height="50" alt="HTML5" title="HTML5"/>
   &nbsp;
@@ -96,7 +121,7 @@ skills = {
     "security"  : ["scapy", "socket programming", "CVE scanning", "packet analysis"],
     "ml / ai"   : ["scikit-learn", "litellm", "ChromaDB", "multi-agent orchestration"],
     "web"       : ["Flask", "React", "Vite", "Chart.js"],
-    "desktop"   : ["Tauri", "C# UI"],
+    "desktop"   : ["PySide6 / Qt", "Tauri", "C# UI"],
     "mobile"    : ["Flet", "Flutter"],
 }
 ```
@@ -124,7 +149,7 @@ skills = {
   </a>
   &nbsp;
   <a href="https://github.com/berkaslan7988">
-    <img src="https://img.shields.io/badge/github/berkaslan7988-181717?style=for-the-badge&logo=github&logoColor=white" />
+    <img src="https://img.shields.io/badge/berkaslan7988-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
 </p>
 
