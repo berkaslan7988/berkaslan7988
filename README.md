@@ -15,7 +15,7 @@
 
 ```bash
 $ whoami
-> Berk Talha Aslan  |  berkaslan7988  |  Sivas Cumhuriyet Üniversitesi
+> Berk Talha Aslan  |  berkaslan7988  |  Sivas Cumhuriyet Üniversitesi -> Bilişim Sistemleri ve Teknolojileri 4. Sınıf
 > Developer · Security Enthusiast 
 ```
 
