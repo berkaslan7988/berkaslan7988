@@ -49,6 +49,26 @@ A self-designed curriculum. / Kendi kendime tasarladığım bir müfredat.
 
 ---
 
+## 📱 Latest Release — `Person AI`
+
+> *Multi-character AI chat app for Android / Android için çok karakterli yapay zeka sohbet uygulaması*
+
+```
+Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included / APK dahil
+```
+
+| Feature / Özellik | Details / Detaylar |
+|-------------------|--------------------|
+| 🎭 Character System | Custom personas + SillyTavern V2 import/export |
+| ⚡ Streaming | Token-by-token responses with typing indicator |
+| 🎨 Theming | Dark/Light + accent color picker |
+| 💾 Persistence | SQLite, multi-session, session history & search |
+| 🌐 Bilingual | Full TR/EN interface |
+
+🔗 [**berkaslan7988/Person-AI**](https://github.com/berkaslan7988/Person-AI)
+
+---
+
 ## 🛠️ Tech Stack / Teknolojiler
 
 <p align="center">
@@ -61,6 +81,8 @@ A self-designed curriculum. / Kendi kendime tasarladığım bir müfredat.
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="50" height="50" alt="React" title="React"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" width="50" height="50" alt="Flask" title="Flask"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="50" height="50" alt="Flutter / Flet" title="Flutter / Flet"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" width="50" height="50" alt="Rust" title="Rust"/>
   &nbsp;
@@ -75,6 +97,7 @@ skills = {
     "ml / ai"   : ["scikit-learn", "litellm", "ChromaDB", "multi-agent orchestration"],
     "web"       : ["Flask", "React", "Vite", "Chart.js"],
     "desktop"   : ["Tauri", "C# UI"],
+    "mobile"    : ["Flet", "Flutter"],
 }
 ```
 
