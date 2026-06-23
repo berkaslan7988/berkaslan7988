@@ -86,9 +86,9 @@ skills = {
 [x] Cybersecurity & Ethical Hacking  —  Saldırıyı anlamak, savunmak için / To understand the attack, to defend
 [x] AI / Multi-Agent Systems          —  Makinelerin birlikte düşündüğü yer / Where machines think together
 [x] Software Architecture             —  Kod da mimari ister / Code needs architecture too
-[x] Series & Films / Dizi & Film      —  Özellikle thriller & sci-fi 🎬 / Especially thriller & sci-fi
+[x] Series & Films / Dizi & Film      —  Bilim Kurgu, Suç, Psikolojik Gerilim ve Fantastik 🎬 / Sci-fi, Crime, Psychological Thriller, Fantastic
 [x] Music / Müzik                     —  Her türden, mood'a göre 🎧 / Any genre, depends on the mood
-[ ] Sleep / Uyumak                    —  Fazla zaman alıyor, optimize ediyorum / Takes too long, still optimizing
+[x] Sleep / Uyumak                    —  Fazla zaman alıyor, optimize ediyorum / Takes too long, still optimizing..
 ```
 
 ---
