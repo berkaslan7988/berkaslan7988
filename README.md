@@ -16,7 +16,7 @@
 ```bash
 $ whoami
 > Berk Talha Aslan  |  berkaslan7988  |  Sivas Cumhuriyet Üniversitesi
-> Developer · Security Enthusiast · Lifelong Builder
+> Developer · Security Enthusiast 
 ```
 
 ---
