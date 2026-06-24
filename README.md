@@ -109,6 +109,26 @@ Unity 6  —  C#  —  Pure Pursuit + PID  —  Python (Matplotlib) reporting
 
 ---
 
+## 🗡️ Game — `Sunless Crown` / `Güneşsiz Taç`
+
+> *Procedural roguelite dungeon crawler in Godot 4 / Godot 4'te prosedürel roguelite zindan sürünücüsü*
+
+```
+Godot 4.7  —  GDScript  —  procedural generation  —  component architecture  —  custom shaders
+```
+
+| Feature / Özellik | Details / Detaylar |
+|-------------------|--------------------|
+| 🎲 Procedural | Room+corridor generator with **flood-fill connectivity guarantee**, seeded / Flood-fill bağlanabilirlik garantili, seed'li oda+koridor üretici |
+| 🤖 Enemy AI | FSM-driven (idle/patrol/chase/attack); ranged, splitting & tank types / FSM tabanlı; menzilli, bölünen, tank düşmanlar |
+| 👑 Bosses & story | 3 multi-phase bosses with telegraphed attacks + pre/post-fight dialogue / 3 çok fazlı boss, telegraph'lı saldırı + hikâye diyalogları |
+| 🎒 Systems | Loot, inventory, equipment, 22 upgrades, XP/level, meta progression, JSON save / Loot, envanter, ekipman, 22 upgrade, meta ilerleme, save |
+| ✨ Juice | Screen shake, hit-stop, particles, damage numbers, shaders, object pooling / Sarsıntı, hit-stop, partikül, hasar sayıları, shader, havuzlama |
+
+🔗 [**berkaslan7988/sunless-crown**](https://github.com/berkaslan7988)  *(repo adını kendine göre değiştir)*
+
+---
+
 ## 🛠️ Tech Stack / Teknolojiler
 
 <p align="center">
@@ -126,6 +146,8 @@ Unity 6  —  C#  —  Pure Pursuit + PID  —  Python (Matplotlib) reporting
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" width="50" height="50" alt="Unity" title="Unity"/>
   &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" width="50" height="50" alt="Godot / GDScript" title="Godot / GDScript"/>
+  &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="50" height="50" alt="Flutter / Flet" title="Flutter / Flet"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" width="50" height="50" alt="Rust" title="Rust"/>
@@ -142,6 +164,8 @@ skills = {
     "security"  : ["scapy", "socket programming", "CVE scanning", "packet analysis"],
     "ml / ai"   : ["scikit-learn", "litellm", "ChromaDB", "multi-agent orchestration"],
     "control"   : ["PID tuning", "Pure Pursuit", "Unity physics (Rigidbody)", "telemetry & CSV/PDF reporting"],
+    "game dev"  : ["Godot 4 / GDScript", "procedural generation", "FSM enemy AI",
+                   "component architecture", "shaders & game juice", "object pooling"],
     "web"       : ["Flask", "React", "Vite", "Chart.js"],
     "desktop"   : ["PySide6 / Qt", "Tauri", "C# UI"],
     "mobile"    : ["Flet", "Flutter"],
@@ -155,6 +179,7 @@ skills = {
 ```
 [x] Cybersecurity & Ethical Hacking  —  Saldırıyı anlamak, savunmak için / To understand the attack, to defend
 [x] AI / Multi-Agent Systems          —  Makinelerin birlikte düşündüğü yer / Where machines think together
+[x] Game Development / Oyun Geliştirme —  Sistemlerin oynanışa dönüştüğü yer / Where systems become play
 [x] Software Architecture             —  Kod da mimari ister / Code needs architecture too
 [x] Series & Films / Dizi & Film      —  Bilim Kurgu, Suç, Psikolojik Gerilim ve Fantastik 🎬 / Sci-fi, Crime, Psychological Thriller, Fantastic
 [x] Music / Müzik                     —  Her türden, mood'a göre 🎧 / Any genre, depends on the mood
