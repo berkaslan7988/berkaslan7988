@@ -125,7 +125,7 @@ Godot 4.7  —  GDScript  —  procedural generation  —  component architectur
 | 🎒 Systems | Loot, inventory, equipment, 22 upgrades, XP/level, meta progression, JSON save / Loot, envanter, ekipman, 22 upgrade, meta ilerleme, save |
 | ✨ Juice | Screen shake, hit-stop, particles, damage numbers, shaders, object pooling / Sarsıntı, hit-stop, partikül, hasar sayıları, shader, havuzlama |
 
-🔗 [**berkaslan7988/sunless-crown**](https://github.com/berkaslan7988)  *(repo adını kendine göre değiştir)*
+🔗 [**berkaslan7988/sunless-crown**](https://github.com/berkaslan7988/2d-dungeon-crawler)
 
 ---
 
