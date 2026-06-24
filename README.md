@@ -90,6 +90,25 @@ Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included 
 
 ---
 
+## 🏎️ Project — `PID-vehicle-simulation`
+
+> *PID-controlled autonomous vehicle lane-following in Unity / Unity'de PID kontrolcü ile otonom araç şerit takibi*
+
+```
+Unity 6  —  C#  —  Pure Pursuit + PID  —  Python (Matplotlib) reporting
+```
+
+| Feature / Özellik | Details / Detaylar |
+|-------------------|--------------------|
+| 🎯 Control | Pure Pursuit + PID steering, live-tunable Kp/Ki/Kd / Canlı ayarlanabilir Kp/Ki/Kd ile direksiyon kontrolü |
+| 🛣️ Route | 30-waypoint city + highway-ramp track with Laplacian smoothing / Laplacian yumuşatmalı, şehir içi + otoyol rampalı 30 waypoint'lik rota |
+| 📊 Telemetry | Real-time e(t)/u(t) charts, CSV logging, auto report generation / Gerçek zamanlı e(t)/u(t) grafikleri, CSV kayıt, otomatik rapor üretimi |
+| 🧮 Result | 1.51° avg tracking error, 3.21° RMS / 1.51° ortalama, 3.21° RMS takip hatası |
+
+🔗 [**berkaslan7988/PID-vehicle-simulation**](https://github.com/berkaslan7988/PID-vehicle-simulation)
+
+---
+
 ## 🛠️ Tech Stack / Teknolojiler
 
 <p align="center">
@@ -104,6 +123,8 @@ Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included 
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" width="50" height="50" alt="Flask" title="Flask"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/qt/qt-original.svg" width="50" height="50" alt="Qt / PySide6" title="Qt / PySide6"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" width="50" height="50" alt="Unity" title="Unity"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="50" height="50" alt="Flutter / Flet" title="Flutter / Flet"/>
   &nbsp;
@@ -120,6 +141,7 @@ Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included 
 skills = {
     "security"  : ["scapy", "socket programming", "CVE scanning", "packet analysis"],
     "ml / ai"   : ["scikit-learn", "litellm", "ChromaDB", "multi-agent orchestration"],
+    "control"   : ["PID tuning", "Pure Pursuit", "Unity physics (Rigidbody)", "telemetry & CSV/PDF reporting"],
     "web"       : ["Flask", "React", "Vite", "Chart.js"],
     "desktop"   : ["PySide6 / Qt", "Tauri", "C# UI"],
     "mobile"    : ["Flet", "Flutter"],
