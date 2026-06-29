@@ -15,32 +15,32 @@
 
 ```bash
 $ whoami
-> Berk Talha Aslan  |  berkaslan7988  |  Sivas Cumhuriyet Üniversitesi -> Bilişim Sistemleri ve Teknolojileri 4. Sınıf
+> Berk Talha Aslan  |  berkaslan7988  |  Sivas Cumhuriyet University -> Information Systems and Technologies, 4th Year
 > Developer · Security Enthusiast 
 ```
 
 ---
 
-## ⚡ About / Hakkımda
+## ⚡ About
 
-A curious CS student trying to keep software development and security under the same roof. / Yazılım geliştirme ve güvenliği aynı çatı altında tutmaya çalışan meraklı bir bilgisayar öğrencisiyim.
+A curious CS student trying to keep software development and security under the same roof.
 
-Every project I build is the foundation for the next one. / Yaptığım her proje, bir sonrakinin zemini.
+Every project I build is the foundation for the next one.
 
-Currently working on **cybersecurity** & **software development** — from cryptography to ML-based detection systems, from single scripts to multi-agent AI. / Şu an **siber güvenlik** & **yazılım geliştirme** üzerine çalışıyorum — kriptografiden ML tabanlı tespit sistemlerine, basit script'lerden çok-ajanlı yapay zekaya kadar.
+Currently working on **cybersecurity** & **software development** — from cryptography to ML-based detection systems, from single scripts to multi-agent AI.
 
 ---
 
 ## 📡 Latest Release — `NetScope`
 
-> *Wi-Fi monitoring, analysis & defensive security — Windows desktop / Windows masaüstü için Wi-Fi izleme, analiz & savunma odaklı güvenlik*
+> *Wi-Fi monitoring, analysis & defensive security — Windows desktop*
 
 ```
 Python + PySide6 (Qt)  —  native WLAN API (ctypes)  —  SQLite  —  single-file .exe
 ```
 
-| Feature / Özellik | Details / Detaylar |
-|-------------------|--------------------|
+| Feature | Details |
+|---------|---------|
 | 📶 Live scanning | Real RSSI via the native WLAN API, color-coded security, signal sparklines |
 | 📊 Analytics | Signal-over-time charts, channel congestion scoring, best-channel advice |
 | 🌐 LAN discovery | Device map, TCP port/service scan, bandwidth — *your own network only* |
@@ -54,17 +54,17 @@ Python + PySide6 (Qt)  —  native WLAN API (ctypes)  —  SQLite  —  single-f
 
 ## 🗂️ Featured Project — `perfect_victory`
 
-> *33 projects / proje · 5 difficulty levels / zorluk seviyesi · Cryptography → Autonomous AI Agent / Kriptografiden Otonom AI Agent'a*
+> *33 projects · 5 difficulty levels · Cryptography → Autonomous AI Agent*
 
-A self-designed curriculum. / Kendi kendime tasarladığım bir müfredat.
+A self-designed curriculum.
 
-| Level / Seviye | Theme / Tema | What's inside / İçerik |
-|----------------|--------------|------------------------|
-| `qwerty` | Cryptography & Fundamentals / Kriptografi & Temeller | Ciphers, hashing, OSINT, networking / Şifreleme, hash, OSINT, ağ temelleri |
-| `ytrewq` | Reverse Engineering & Pentest / Tersine Mühendislik | Sockets, HTTP, memory manipulation / Bellek manipülasyonu |
-| `zxcvbn` | Advanced Security + ML / İleri Güvenlik | Scapy, CVE scanning, scikit-learn models |
-| `nbvcxz` | Full Applications / Tam Uygulamalar | Multi-agent AI, E2EE messaging, security suite |
-| `asdfgh` | Web Development / Web Geliştirme | Flask, MVC, auth, e-commerce, forum |
+| Level | Theme | What's inside |
+|-------|-------|----------------|
+| `qwerty` | Cryptography & Fundamentals | Ciphers, hashing, OSINT, networking |
+| `ytrewq` | Reverse Engineering & Pentest | Sockets, HTTP, memory manipulation |
+| `zxcvbn` | Advanced Security + ML | Scapy, CVE scanning, scikit-learn models |
+| `nbvcxz` | Full Applications | Multi-agent AI, E2EE messaging, security suite |
+| `asdfgh` | Web Development | Flask, MVC, auth, e-commerce, forum |
 
 🔗 [**berkaslan7988/perfect_victory**](https://github.com/berkaslan7988/perfect_victory)
 
@@ -72,14 +72,14 @@ A self-designed curriculum. / Kendi kendime tasarladığım bir müfredat.
 
 ## 📱 Release — `Person AI`
 
-> *Multi-character AI chat app for Android / Android için çok karakterli yapay zeka sohbet uygulaması*
+> *Multi-character AI chat app for Android*
 
 ```
-Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included / APK dahil
+Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included
 ```
 
-| Feature / Özellik | Details / Detaylar |
-|-------------------|--------------------|
+| Feature | Details |
+|---------|---------|
 | 🎭 Character System | Custom personas + SillyTavern V2 import/export |
 | ⚡ Streaming | Token-by-token responses with typing indicator |
 | 🎨 Theming | Dark/Light + accent color picker |
@@ -92,44 +92,44 @@ Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included 
 
 ## 🏎️ Project — `PID-vehicle-simulation`
 
-> *PID-controlled autonomous vehicle lane-following in Unity / Unity'de PID kontrolcü ile otonom araç şerit takibi*
+> *PID-controlled autonomous vehicle lane-following in Unity*
 
 ```
 Unity 6  —  C#  —  Pure Pursuit + PID  —  Python (Matplotlib) reporting
 ```
 
-| Feature / Özellik | Details / Detaylar |
-|-------------------|--------------------|
-| 🎯 Control | Pure Pursuit + PID steering, live-tunable Kp/Ki/Kd / Canlı ayarlanabilir Kp/Ki/Kd ile direksiyon kontrolü |
-| 🛣️ Route | 30-waypoint city + highway-ramp track with Laplacian smoothing / Laplacian yumuşatmalı, şehir içi + otoyol rampalı 30 waypoint'lik rota |
-| 📊 Telemetry | Real-time e(t)/u(t) charts, CSV logging, auto report generation / Gerçek zamanlı e(t)/u(t) grafikleri, CSV kayıt, otomatik rapor üretimi |
-| 🧮 Result | 1.51° avg tracking error, 3.21° RMS / 1.51° ortalama, 3.21° RMS takip hatası |
+| Feature | Details |
+|---------|---------|
+| 🎯 Control | Pure Pursuit + PID steering, live-tunable Kp/Ki/Kd |
+| 🛣️ Route | 30-waypoint city + highway-ramp track with Laplacian smoothing |
+| 📊 Telemetry | Real-time e(t)/u(t) charts, CSV logging, auto report generation |
+| 🧮 Result | 1.51° avg tracking error, 3.21° RMS |
 
 🔗 [**berkaslan7988/PID-vehicle-simulation**](https://github.com/berkaslan7988/PID-vehicle-simulation)
 
 ---
 
-## 🗡️ Game — `Sunless Crown` / `Güneşsiz Taç`
+## 🗡️ Game — `Sunless Crown`
 
-> *Procedural roguelite dungeon crawler in Godot 4 / Godot 4'te prosedürel roguelite zindan sürünücüsü*
+> *Procedural roguelite dungeon crawler in Godot 4*
 
 ```
 Godot 4.7  —  GDScript  —  procedural generation  —  component architecture  —  custom shaders
 ```
 
-| Feature / Özellik | Details / Detaylar |
-|-------------------|--------------------|
-| 🎲 Procedural | Room+corridor generator with **flood-fill connectivity guarantee**, seeded / Flood-fill bağlanabilirlik garantili, seed'li oda+koridor üretici |
-| 🤖 Enemy AI | FSM-driven (idle/patrol/chase/attack); ranged, splitting & tank types / FSM tabanlı; menzilli, bölünen, tank düşmanlar |
-| 👑 Bosses & story | 3 multi-phase bosses with telegraphed attacks + pre/post-fight dialogue / 3 çok fazlı boss, telegraph'lı saldırı + hikâye diyalogları |
-| 🎒 Systems | Loot, inventory, equipment, 22 upgrades, XP/level, meta progression, JSON save / Loot, envanter, ekipman, 22 upgrade, meta ilerleme, save |
-| ✨ Juice | Screen shake, hit-stop, particles, damage numbers, shaders, object pooling / Sarsıntı, hit-stop, partikül, hasar sayıları, shader, havuzlama |
+| Feature | Details |
+|---------|---------|
+| 🎲 Procedural | Room+corridor generator with **flood-fill connectivity guarantee**, seeded |
+| 🤖 Enemy AI | FSM-driven (idle/patrol/chase/attack); ranged, splitting & tank types |
+| 👑 Bosses & story | 3 multi-phase bosses with telegraphed attacks + pre/post-fight dialogue |
+| 🎒 Systems | Loot, inventory, equipment, 22 upgrades, XP/level, meta progression, JSON save |
+| ✨ Juice | Screen shake, hit-stop, particles, damage numbers, shaders, object pooling |
 
 🔗 [**berkaslan7988/sunless-crown**](https://github.com/berkaslan7988/2d-dungeon-crawler)
 
 ---
 
-## 🛠️ Tech Stack / Teknolojiler
+## 🛠️ Tech Stack
 
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" height="50" alt="Python" title="Python"/>
@@ -174,21 +174,21 @@ skills = {
 
 ---
 
-## 🧠 Interests / İlgi Alanları
+## 🧠 Interests
 
 ```
-[x] Cybersecurity & Ethical Hacking  —  Saldırıyı anlamak, savunmak için / To understand the attack, to defend
-[x] AI / Multi-Agent Systems          —  Makinelerin birlikte düşündüğü yer / Where machines think together
-[x] Game Development / Oyun Geliştirme —  Sistemlerin oynanışa dönüştüğü yer / Where systems become play
-[x] Software Architecture             —  Kod da mimari ister / Code needs architecture too
-[x] Series & Films / Dizi & Film      —  Bilim Kurgu, Suç, Psikolojik Gerilim ve Fantastik 🎬 / Sci-fi, Crime, Psychological Thriller, Fantastic
-[x] Music / Müzik                     —  Her türden, mood'a göre 🎧 / Any genre, depends on the mood
-[x] Sleep / Uyumak                    —  Fazla zaman alıyor, optimize ediyorum / Takes too long, still optimizing..
+[x] Cybersecurity & Ethical Hacking  —  To understand the attack, to defend
+[x] AI / Multi-Agent Systems          —  Where machines think together
+[x] Game Development                  —  Where systems become play
+[x] Software Architecture             —  Code needs architecture too
+[x] Series & Films                    —  Sci-fi, Crime, Psychological Thriller, Fantastic 🎬
+[x] Music                             —  Any genre, depends on the mood 🎧
+[x] Sleep                             —  Takes too long, still optimizing..
 ```
 
 ---
 
-## 📬 Reach Me / Ulaşın
+## 📬 Reach Me
 
 <p align="center">
   <a href="mailto:berkaslan7988@gmail.com">
