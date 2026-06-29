@@ -31,7 +31,28 @@ Currently working on **cybersecurity** & **software development** — from crypt
 
 ---
 
-## 📡 Latest Release — `NetScope`
+## 📡 Latest Release — `CyberSec Academy`
+
+> *Interactive, bilingual (TR/EN) cybersecurity learning app — cross-platform*
+
+```
+Flutter + Dart  —  21 sections · 105 topics · 171 questions  —  Windows/Web/Linux/macOS/Android/iOS
+```
+
+| Feature | Details |
+|---------|---------|
+| 📚 Learn | 21 sections, 105 topics — concept + command examples + step-by-step mini-lab + defense & *common-mistake* notes |
+| 🧪 Test | 171 questions across 6 types incl. **command writing** with flexible grading (flag-order independent, alias-aware, partial credit) |
+| 🔁 Spaced repetition | Leitner box scheduler (1 → 3 → 7 → 16 → 35 days) with a *Today's Review* queue |
+| 📊 Dashboard | Overall progress ring, stat cards, achievement badges, weak-area suggestions |
+| 🌐 Bilingual + UX | Instant TR/EN switch · light/dark themes · full-text search · persistent progress |
+| 🛡️ Ethics-first | Every offensive topic paired with a defense/detection counterpart — lab/authorized use only |
+
+🔗 [**berkaslan7988/CyberSec-Academy**](https://github.com/berkaslan7988/CyberSec-Academy)
+
+---
+
+## 📶 Release — `NetScope`
 
 > *Wi-Fi monitoring, analysis & defensive security — Windows desktop*
 
@@ -148,7 +169,9 @@ Godot 4.7  —  GDScript  —  procedural generation  —  component architectur
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" width="50" height="50" alt="Godot / GDScript" title="Godot / GDScript"/>
   &nbsp;
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="50" height="50" alt="Flutter / Flet" title="Flutter / Flet"/>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" width="50" height="50" alt="Flutter" title="Flutter"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" width="50" height="50" alt="Dart" title="Dart"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" width="50" height="50" alt="Rust" title="Rust"/>
   &nbsp;
@@ -168,7 +191,7 @@ skills = {
                    "component architecture", "shaders & game juice", "object pooling"],
     "web"       : ["Flask", "React", "Vite", "Chart.js"],
     "desktop"   : ["PySide6 / Qt", "Tauri", "C# UI"],
-    "mobile"    : ["Flet", "Flutter"],
+    "mobile"    : ["Flet", "Flutter / Dart"],
 }
 ```
 
