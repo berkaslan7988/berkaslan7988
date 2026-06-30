@@ -31,7 +31,28 @@ Currently working on **cybersecurity** & **software development** — from crypt
 
 ---
 
-## 📡 Latest Release — `CyberSec Academy`
+## 🛡️ Latest Release — `NetSentinel`
+
+> *Real-time ML-based network intrusion detection — Windows desktop*
+
+```
+Python + PySide6 + pyqtgraph  —  Scapy  —  scikit-learn + PyTorch  —  SQLite  —  bilingual (EN/TR)
+```
+
+| Feature | Details |
+|---------|---------|
+| 📡 Live detection | Scapy capture → bidirectional 5-tuple flows → 78 CIC-IDS2017 features → ML inference at **~9 ms/flow** |
+| 🤖 Hybrid ML | RandomForest (F1 **0.9968**, FPR 0.11%) + IsolationForest + **PyTorch Autoencoder**; RF-weighted 0–100 risk score |
+| 🚨 Smart alerts | Per-source-IP deduplication/aggregation, severity levels, attacker profiling — *no alarm floods* |
+| 🖥️ Dashboard | Phosphor-green terminal-style PySide6 panel + pyqtgraph live charts; **live** or **CSV/DB replay** demo mode |
+| 🧪 Tested | 75 unit/integration tests · safety-guarded attack simulator + benchmark · trained on CIC-IDS2017 (~2.36M flows) |
+| 🛡️ Ethics-first | Own/lab network only; attack simulator refuses public targets and requires explicit confirmation |
+
+🔗 [**berkaslan7988/NetSentinel**](https://github.com/berkaslan7988/NetSentinel)
+
+---
+
+## 📡 Release — `CyberSec Academy`
 
 > *Interactive, bilingual (TR/EN) cybersecurity learning app — cross-platform*
 
@@ -155,6 +176,10 @@ Godot 4.7  —  GDScript  —  procedural generation  —  component architectur
 <p align="center">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="50" height="50" alt="Python" title="Python"/>
   &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" width="50" height="50" alt="PyTorch" title="PyTorch"/>
+  &nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" width="50" height="50" alt="scikit-learn" title="scikit-learn"/>
+  &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" width="50" height="50" alt="C#" title="C#"/>
   &nbsp;
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="50" height="50" alt="JavaScript" title="JavaScript"/>
@@ -184,8 +209,9 @@ Godot 4.7  —  GDScript  —  procedural generation  —  component architectur
 
 ```python
 skills = {
-    "security"  : ["scapy", "socket programming", "CVE scanning", "packet analysis"],
-    "ml / ai"   : ["scikit-learn", "litellm", "ChromaDB", "multi-agent orchestration"],
+    "security"  : ["scapy", "intrusion detection", "flow analysis", "packet analysis", "CVE scanning"],
+    "ml / ai"   : ["scikit-learn", "PyTorch", "autoencoders", "anomaly detection",
+                   "litellm", "ChromaDB", "multi-agent orchestration"],
     "control"   : ["PID tuning", "Pure Pursuit", "Unity physics (Rigidbody)", "telemetry & CSV/PDF reporting"],
     "game dev"  : ["Godot 4 / GDScript", "procedural generation", "FSM enemy AI",
                    "component architecture", "shaders & game juice", "object pooling"],
