@@ -31,7 +31,29 @@ Currently working on **cybersecurity** & **software development** — from crypt
 
 ---
 
-## 🛡️ Latest Release — `NetSentinel`
+## 🎡 Latest Release — `Night Fair`
+
+> *A 64-game bilingual browser arcade — zero dependencies, playable right now*
+
+```
+Vanilla HTML/CSS/JS  —  no frameworks, no build step  —  GitHub Pages  —  bilingual (EN/TR)
+```
+
+| Feature | Details |
+|---------|---------|
+| 🕹️ 64 mini games | 7 categories: arcade, puzzle, word, brain, cards & dice, board-vs-bot, carnival |
+| 🧠 Real algorithms | Sudoku generator with **unique-solution guarantee**, minimax bots, maze & spanning-tree generation, optimal Nim (XOR strategy) |
+| 🎟️ Ticket economy | Cross-game tickets, best scores, favorites, deep links (`#g/snake`) — all persisted in localStorage |
+| 🌐 Fully bilingual | `/en` and `/tr` share one engine; every game ships its own EN/TR strings — fix once, fixed in both |
+| ⚙️ Tiny custom engine | Game registry, hash router, lifecycle cleanup (zero leaked timers/listeners), DPR-aware canvas, synthesized WebAudio SFX |
+| 📱 Plays anywhere | Touch + keyboard controls, responsive layout, works offline from a single folder |
+
+🎮 **Play:** [berkaslan7988.github.io/night-fair](https://berkaslan7988.github.io/night-fair/)
+🔗 [**berkaslan7988/night-fair**](https://github.com/berkaslan7988/night-fair)
+
+---
+
+## 🛡️ Release — `NetSentinel`
 
 > *Real-time ML-based network intrusion detection — Windows desktop*
 
@@ -214,8 +236,9 @@ skills = {
                    "litellm", "ChromaDB", "multi-agent orchestration"],
     "control"   : ["PID tuning", "Pure Pursuit", "Unity physics (Rigidbody)", "telemetry & CSV/PDF reporting"],
     "game dev"  : ["Godot 4 / GDScript", "procedural generation", "FSM enemy AI",
-                   "component architecture", "shaders & game juice", "object pooling"],
-    "web"       : ["Flask", "React", "Vite", "Chart.js"],
+                   "component architecture", "shaders & game juice", "object pooling",
+                   "vanilla JS game engines", "minimax & puzzle generators"],
+    "web"       : ["Flask", "React", "Vite", "Chart.js", "vanilla JS SPA", "i18n architecture"],
     "desktop"   : ["PySide6 / Qt", "Tauri", "C# UI"],
     "mobile"    : ["Flet", "Flutter / Dart"],
 }
