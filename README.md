@@ -95,6 +95,25 @@ Flutter + Dart  —  21 sections · 105 topics · 171 questions  —  Windows/We
 
 ---
 
+## 🗡️ Game — `Sunless Crown`
+
+> *Procedural roguelite dungeon crawler in Godot 4*
+
+```
+Godot 4.7  —  GDScript  —  procedural generation  —  component architecture  —  custom shaders
+```
+
+| Feature | Details |
+|---------|---------|
+| 🎲 Procedural | Room+corridor generator with **flood-fill connectivity guarantee**, seeded |
+| 🤖 Enemy AI | FSM-driven (idle/patrol/chase/attack); ranged, splitting & tank types |
+| 👑 Bosses & story | 3 multi-phase bosses with telegraphed attacks + pre/post-fight dialogue |
+| 🎒 Systems | Loot, inventory, equipment, 22 upgrades, XP/level, meta progression, JSON save |
+| ✨ Juice | Screen shake, hit-stop, particles, damage numbers, shaders, object pooling |
+
+🔗 [**berkaslan7988/sunless-crown**](https://github.com/berkaslan7988/2d-dungeon-crawler)
+
+---
 ## 📶 Release — `NetScope`
 
 > *Wi-Fi monitoring, analysis & defensive security — Windows desktop*
@@ -116,21 +135,22 @@ Python + PySide6 (Qt)  —  native WLAN API (ctypes)  —  SQLite  —  single-f
 
 ---
 
-## 🗂️ Featured Project — `perfect_victory`
+## 🏎️ Project — `PID-vehicle-simulation`
 
-> *33 projects · 5 difficulty levels · Cryptography → Autonomous AI Agent*
+> *PID-controlled autonomous vehicle lane-following in Unity*
 
-A self-designed curriculum.
+```
+Unity 6  —  C#  —  Pure Pursuit + PID  —  Python (Matplotlib) reporting
+```
 
-| Level | Theme | What's inside |
-|-------|-------|----------------|
-| `qwerty` | Cryptography & Fundamentals | Ciphers, hashing, OSINT, networking |
-| `ytrewq` | Reverse Engineering & Pentest | Sockets, HTTP, memory manipulation |
-| `zxcvbn` | Advanced Security + ML | Scapy, CVE scanning, scikit-learn models |
-| `nbvcxz` | Full Applications | Multi-agent AI, E2EE messaging, security suite |
-| `asdfgh` | Web Development | Flask, MVC, auth, e-commerce, forum |
+| Feature | Details |
+|---------|---------|
+| 🎯 Control | Pure Pursuit + PID steering, live-tunable Kp/Ki/Kd |
+| 🛣️ Route | 30-waypoint city + highway-ramp track with Laplacian smoothing |
+| 📊 Telemetry | Real-time e(t)/u(t) charts, CSV logging, auto report generation |
+| 🧮 Result | 1.51° avg tracking error, 3.21° RMS |
 
-🔗 [**berkaslan7988/perfect_victory**](https://github.com/berkaslan7988/perfect_victory)
+🔗 [**berkaslan7988/PID-vehicle-simulation**](https://github.com/berkaslan7988/PID-vehicle-simulation)
 
 ---
 
@@ -154,42 +174,21 @@ Gemini · Groq · DeepSeek · OpenRouter  —  Python + Flet  —  APK included
 
 ---
 
-## 🏎️ Project — `PID-vehicle-simulation`
+## 🗂️ Featured Project — `perfect_victory`
 
-> *PID-controlled autonomous vehicle lane-following in Unity*
+> *33 projects · 5 difficulty levels · Cryptography → Autonomous AI Agent*
 
-```
-Unity 6  —  C#  —  Pure Pursuit + PID  —  Python (Matplotlib) reporting
-```
+A self-designed curriculum.
 
-| Feature | Details |
-|---------|---------|
-| 🎯 Control | Pure Pursuit + PID steering, live-tunable Kp/Ki/Kd |
-| 🛣️ Route | 30-waypoint city + highway-ramp track with Laplacian smoothing |
-| 📊 Telemetry | Real-time e(t)/u(t) charts, CSV logging, auto report generation |
-| 🧮 Result | 1.51° avg tracking error, 3.21° RMS |
+| Level | Theme | What's inside |
+|-------|-------|----------------|
+| `qwerty` | Cryptography & Fundamentals | Ciphers, hashing, OSINT, networking |
+| `ytrewq` | Reverse Engineering & Pentest | Sockets, HTTP, memory manipulation |
+| `zxcvbn` | Advanced Security + ML | Scapy, CVE scanning, scikit-learn models |
+| `nbvcxz` | Full Applications | Multi-agent AI, E2EE messaging, security suite |
+| `asdfgh` | Web Development | Flask, MVC, auth, e-commerce, forum |
 
-🔗 [**berkaslan7988/PID-vehicle-simulation**](https://github.com/berkaslan7988/PID-vehicle-simulation)
-
----
-
-## 🗡️ Game — `Sunless Crown`
-
-> *Procedural roguelite dungeon crawler in Godot 4*
-
-```
-Godot 4.7  —  GDScript  —  procedural generation  —  component architecture  —  custom shaders
-```
-
-| Feature | Details |
-|---------|---------|
-| 🎲 Procedural | Room+corridor generator with **flood-fill connectivity guarantee**, seeded |
-| 🤖 Enemy AI | FSM-driven (idle/patrol/chase/attack); ranged, splitting & tank types |
-| 👑 Bosses & story | 3 multi-phase bosses with telegraphed attacks + pre/post-fight dialogue |
-| 🎒 Systems | Loot, inventory, equipment, 22 upgrades, XP/level, meta progression, JSON save |
-| ✨ Juice | Screen shake, hit-stop, particles, damage numbers, shaders, object pooling |
-
-🔗 [**berkaslan7988/sunless-crown**](https://github.com/berkaslan7988/2d-dungeon-crawler)
+🔗 [**berkaslan7988/perfect_victory**](https://github.com/berkaslan7988/perfect_victory)
 
 ---
 
