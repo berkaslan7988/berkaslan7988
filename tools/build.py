@@ -431,7 +431,7 @@ def sheet(p: Project, theme: str, refresh: bool, total: int) -> str:
     # notes run in three columns under the screenshot
     note_w = (W - 2 * PAD - 2 * 28) / 3
     note_lines = [FACES["sans"].wrap(n.text, 13.5, note_w) for n in p.notes]
-    notes_top = top + shot_h + 34
+    notes_top = top + shot_h + 32
     notes_h = 18 + 18 * max(len(ls) for ls in note_lines)
     foot_y = notes_top + notes_h + 10
     H = round(foot_y + 40)
@@ -454,7 +454,6 @@ def sheet(p: Project, theme: str, refresh: bool, total: int) -> str:
 
     for i, (note, lines) in enumerate(zip(p.notes, note_lines)):
         x = PAD + i * (note_w + 28)
-        s.line(x, notes_top - 19.25, x + 18, notes_top - 19.25, t["red"], 1.5)
         s.text(x, notes_top, note.term, "sans6", 13.5, t["ink"])
         for j, ln in enumerate(lines):
             s.text(x, notes_top + 18 * (j + 1), ln, "sans", 13.5, t["muted"])
