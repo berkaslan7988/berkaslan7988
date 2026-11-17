@@ -3,7 +3,7 @@
   <img alt="Berk Talha Aslan. I build network tools and self-hosted apps, and I like to know how they break. Developer and security student: Information Systems and Technologies, fourth year, Sivas Cumhuriyet University; based in Balıkesir, Türkiye." src="assets/header-light.svg">
 </picture>
 
-I'm a fourth-year Information Systems and Technologies student who works on both halves of the same problem: writing software, and working out how it breaks. Lately that means Windows tools that watch networks and apps that keep your data on your own machine. Each sheet below is a project I keep improving; click one to open it.
+I'm a fourth-year Information Systems and Technologies student, splitting my time between writing software and studying security. Lately that means Windows tools that watch networks and apps that keep your data on your own machine. Each sheet below is a project I keep improving; click one to open it.
 
 <a href="https://github.com/berkaslan7988/NetScope">
 <picture>

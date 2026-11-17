@@ -41,13 +41,11 @@ PAD = 20
 THEMES = {
     "light": dict(
         paper="#fbfaf8", ink="#16171a", soft="#37383d", muted="#6b6a66", faint="#9a978f",
-        line="#dcd8cf", hair="#ebe8e1", red="#cf2a1d", on_red="#ffffff", halo="#fbfaf8",
-        frame="#d3cfc5",
+        line="#dcd8cf", red="#cf2a1d", frame="#d3cfc5",
     ),
     "dark": dict(
         paper="#12161c", ink="#ebe9e4", soft="#c9cbcf", muted="#959ba4", faint="#68707a",
-        line="#2b323c", hair="#1e242c", red="#ff5d4f", on_red="#170807", halo="#12161c",
-        frame="#323a45",
+        line="#2b323c", red="#ff5d4f", frame="#323a45",
     ),
 }
 
@@ -211,8 +209,6 @@ class Svg:
 
 @dataclass
 class Note:
-    at: tuple[float, float]        # target in source-screenshot pixels
-    offset: tuple[float, float]    # balloon position relative to the target, in display px
     term: str
     text: str
 
@@ -230,7 +226,7 @@ class Project:
     crop: tuple[int, int, int, int]
     specs: list[tuple[str, str]] = field(default_factory=list)
     notes: list[Note] = field(default_factory=list)
-    kind: str = "sheet"             # "sheet" (big, with notes) or "strip" (compact)
+    kind: str = "sheet"             # "sheet" (big, with notes) or "strip" (compact, no notes)
     side: str = "left"              # where the screenshot sits on a sheet
     live_js: str = ""               # run on the live page before capture
     ready: bool = True              # False keeps it out of the README build
@@ -250,11 +246,11 @@ PROJECTS = [
         crop=(236, 0, 1440, 752),
         specs=[("TESTS", "65"), ("LICENCE", "MIT"), ("REV", "1.0.0")],
         notes=[
-            Note((630, 310), (40, -22), "Spectrum screen",
+            Note("Spectrum screen",
                  "Every access point by channel and signal strength."),
-            Note((736, 698), (-34, 16), "Security meter",
+            Note("Security meter",
                  "Four steps from open to WPA3, plus evil-twin and rogue-AP checks."),
-            Note((1320, 214), (34, -12), "Readout",
+            Note("Readout",
                  "A dBm dial, a 60-second trace, and who shares the channel."),
         ],
     ),
@@ -270,11 +266,11 @@ PROJECTS = [
         side="right",
         specs=[("TESTS", "83"), ("LICENCE", "MIT"), ("REV", "2.0.0")],
         notes=[
-            Note((686, 300), (-34, -34), "Flow timeline",
+            Note("Flow timeline",
                  "Ten minutes in 5 s buckets, threat flows stacked on top."),
-            Note((733, 529), (30, 26), "Three detectors",
+            Note("Three detectors",
                  "RandomForest, IsolationForest and an autoencoder score every flow."),
-            Note((1180, 503), (-28, -36), "Grouped alerts",
+            Note("Grouped alerts",
                  "One alert per source per minute, with a 0–100 risk score."),
         ],
     ),
@@ -289,11 +285,11 @@ PROJECTS = [
         crop=(350, 0, 1800, 906),
         specs=[("PROVIDERS", "5"), ("SERVER", "STDLIB"), ("REV", "3.0.0")],
         notes=[
-            Note((552, 470), (40, -30), "Characters",
+            Note("Characters",
                  "Personality, scenario, greetings and tags; four starters per account."),
-            Note((640, 279), (34, -34), "Gallery",
+            Note("Gallery",
                  "Search, tag filters, sorting and favourites."),
-            Note((1452, 137), (-44, 30), "Card import",
+            Note("Card import",
                  "Drop SillyTavern V2 cards (.png or .json) anywhere in the window."),
         ],
     ),
@@ -390,13 +386,7 @@ def top_strip(s: Svg, p: Project) -> None:
     s.line(PAD, 40.5, W - PAD, 40.5, t["line"])
 
 
-def balloon(s: Svg, cx, cy, n: str, r=11.0, size=13.0) -> None:
-    t = s.t
-    s.raw(f'<circle cx="{num(cx)}" cy="{num(cy)}" r="{num(r)}" fill="{t["red"]}" stroke="{t["halo"]}" stroke-width="2"/>')
-    s.text(cx, cy + size * 0.36, n, "cond", size, t["on_red"], anchor="middle")
-
-
-def screenshot(s: Svg, p: Project, theme: str, box, refresh: bool, notes: bool) -> None:
+def screenshot(s: Svg, p: Project, theme: str, box, refresh: bool) -> None:
     t = s.t
     x, y, w, h = box
     clip = f"clip-{p.slug}"
@@ -406,18 +396,6 @@ def screenshot(s: Svg, p: Project, theme: str, box, refresh: bool, notes: bool) 
           f'clip-path="url(#{clip})" preserveAspectRatio="xMidYMid slice"/>')
     s.raw(f'<rect x="{num(x + .5)}" y="{num(y + .5)}" width="{num(w - 1)}" height="{num(h - 1)}" rx="6" '
           f'fill="none" stroke="{t["frame"]}"/>')
-    if not notes:
-        return
-    cx0, cy0, cx1, cy1 = p.crop
-    k = w / (cx1 - cx0)
-    for i, note in enumerate(p.notes, 1):
-        px, py = x + (note.at[0] - cx0) * k, y + (note.at[1] - cy0) * k
-        bx, by = px + note.offset[0], py + note.offset[1]
-        # leader: halo, then red, then the dot on the target
-        for stroke, width in ((t["halo"], 4.0), (t["red"], 1.4)):
-            s.line(px, py, bx, by, stroke, width, ' stroke-linecap="round"')
-        s.raw(f'<circle cx="{num(px)}" cy="{num(py)}" r="3.2" fill="{t["red"]}" stroke="{t["halo"]}" stroke-width="1.6"/>')
-        balloon(s, bx, by, str(i))
 
 
 def footer(s: Svg, p: Project, y: float, total: int) -> None:
@@ -452,7 +430,7 @@ def sheet(p: Project, theme: str, refresh: bool, total: int) -> str:
 
     # notes run in three columns under the screenshot
     note_w = (W - 2 * PAD - 2 * 28) / 3
-    note_lines = [FACES["sans"].wrap(n.text, 13.5, note_w - 26) for n in p.notes]
+    note_lines = [FACES["sans"].wrap(n.text, 13.5, note_w) for n in p.notes]
     notes_top = top + shot_h + 34
     notes_h = 18 + 18 * max(len(ls) for ls in note_lines)
     foot_y = notes_top + notes_h + 10
@@ -461,7 +439,7 @@ def sheet(p: Project, theme: str, refresh: bool, total: int) -> str:
     s = Svg(H, theme, f"{p.title}: {p.lede}", background=True)
     t = s.t
     top_strip(s, p)
-    screenshot(s, p, theme, (shot_x, top, shot_w, shot_h), refresh, notes=True)
+    screenshot(s, p, theme, (shot_x, top, shot_w, shot_h), refresh)
 
     y = top + 32
     s.text(col_x - 1, y, p.title, "cond", 42, t["ink"], tracking=-0.005)
@@ -476,36 +454,36 @@ def sheet(p: Project, theme: str, refresh: bool, total: int) -> str:
 
     for i, (note, lines) in enumerate(zip(p.notes, note_lines)):
         x = PAD + i * (note_w + 28)
-        balloon(s, x + 9, notes_top - 4.6, str(i + 1), r=9, size=11.5)
-        s.text(x + 26, notes_top, note.term, "sans6", 13.5, t["ink"])
+        s.line(x, notes_top - 19.25, x + 18, notes_top - 19.25, t["red"], 1.5)
+        s.text(x, notes_top, note.term, "sans6", 13.5, t["ink"])
         for j, ln in enumerate(lines):
-            s.text(x + 26, notes_top + 18 * (j + 1), ln, "sans", 13.5, t["muted"])
+            s.text(x, notes_top + 18 * (j + 1), ln, "sans", 13.5, t["muted"])
     footer(s, p, foot_y, total)
     return s.render()
 
 
-def strip(p: Project, theme: str, refresh: bool) -> str:
-    shot_w, shot_h = 304, 190
-    H = 58 + shot_h + 20
+def strip(p: Project, theme: str, refresh: bool, total: int) -> str:
+    """A compact sheet: text and title block on the left, screenshot on the right."""
+    top, shot_w, shot_h, gap = 58, 304, 190, 28
+    shot_x = W - PAD - shot_w
+    col_w = shot_x - gap - PAD
+    foot_y = top + shot_h + 18
+    H = foot_y + 40
     s = Svg(H, theme, f"{p.title}: {p.lede}", background=True)
     t = s.t
     top_strip(s, p)
-    shot_x = W - PAD - shot_w
-    screenshot(s, p, theme, (shot_x, 58, shot_w, shot_h), refresh, notes=False)
-    col_w = shot_x - PAD - 30
-    y = 58 + 34
-    s.text(PAD - 1, y, p.title, "cond", 38, t["ink"])
-    y += 28
+    screenshot(s, p, theme, (shot_x, top, shot_w, shot_h), refresh)
+    y = top + 32
+    s.text(PAD - 1, y, p.title, "cond", 42, t["ink"], tracking=-0.005)
+    y += 31
     for ln in FACES["sans"].wrap(p.lede, 15, col_w):
         s.text(PAD, y, ln, "sans", 15, t["soft"])
         y += 21
-    # specs and link along the bottom of the text column
-    base = 58 + shot_h - 4
-    x = PAD
-    for label, value in p.specs:
-        s.spans(x, base, [(label + "  ", "mono", t["faint"], 0.08), (value, "mono", t["ink"], 0)], 10)
-        x += FACES["mono"].width(label + "  ", 10, 0.08) + FACES["mono"].width(value, 10) + 22
-    s.spans(shot_x - 30, base, [(p.link, "mono", t["ink"], 0), ("  →", "mono", t["red"], 0)], 11.5, anchor="end")
+    block_top = top + shot_h - 27 * len(p.specs)
+    if y - 21 + 16 > block_top:
+        print(f"  ! {p.slug}: lede runs into the title block by {y - 21 + 16 - block_top:.0f}px")
+    title_block(s, PAD, top + shot_h, col_w, p.specs)
+    footer(s, p, foot_y, total)
     return s.render()
 
 
@@ -603,10 +581,8 @@ def main() -> None:
     for theme in THEMES:
         files = {f"header-{theme}.svg": header(theme, projects)}
         for p in projects:
-            if p.kind == "sheet":
-                files[f"{p.slug}-{theme}.svg"] = sheet(p, theme, args.refresh, len(projects))
-            else:
-                files[f"{p.slug}-{theme}.svg"] = strip(p, theme, args.refresh)
+            build = sheet if p.kind == "sheet" else strip
+            files[f"{p.slug}-{theme}.svg"] = build(p, theme, args.refresh, len(projects))
         for name, svg in files.items():
             (OUT / name).write_text(svg, encoding="utf-8")
             print(f"{name:28} {len(svg.encode()) // 1024:4} KB")
