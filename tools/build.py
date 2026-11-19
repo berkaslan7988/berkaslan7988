@@ -216,7 +216,6 @@ class Note:
 @dataclass
 class Project:
     slug: str
-    no: str
     field: str
     stack: str
     title: str
@@ -227,16 +226,17 @@ class Project:
     specs: list[tuple[str, str]] = field(default_factory=list)
     notes: list[Note] = field(default_factory=list)
     kind: str = "sheet"             # "sheet" (big, with notes) or "strip" (compact, no notes)
-    side: str = "left"              # where the screenshot sits on a sheet
     live_js: str = ""               # run on the live page before capture
     ready: bool = True              # False keeps it out of the README build
+    no: str = ""                    # set from the order of PROJECTS
+    side: str = "left"              # set so sheets alternate left/right
 
 
 RAW = "https://raw.githubusercontent.com/berkaslan7988"
 
 PROJECTS = [
     Project(
-        slug="netscope", no="01", field="SECURITY · WINDOWS DESKTOP",
+        slug="netscope", field="SECURITY · WINDOWS DESKTOP",
         stack="PYTHON · PYSIDE6 · WLAN API · SQLITE",
         title="NetScope",
         lede="A Wi-Fi field analyzer. It shows every network in range, the channels "
@@ -255,7 +255,7 @@ PROJECTS = [
         ],
     ),
     Project(
-        slug="netsentinel", no="02", field="SECURITY · MACHINE LEARNING",
+        slug="netsentinel", field="SECURITY · MACHINE LEARNING",
         stack="PYTHON · SCAPY · SCIKIT-LEARN · PYTORCH",
         title="NetSentinel",
         lede="Real-time intrusion detection with a desktop SOC console. Live traffic "
@@ -263,7 +263,6 @@ PROJECTS = [
         link="github.com/berkaslan7988/NetSentinel",
         shots={t: f"{RAW}/NetSentinel/main/assets/screens/overview-{t}.png" for t in THEMES},
         crop=(0, 0, 1440, 900),
-        side="right",
         specs=[("TESTS", "83"), ("LICENCE", "MIT"), ("REV", "2.0.0")],
         notes=[
             Note("Flow timeline",
@@ -275,26 +274,47 @@ PROJECTS = [
         ],
     ),
     Project(
-        slug="person-ai", no="03", field="SOFTWARE · SELF-HOSTED",
+        slug="cysec", field="SECURITY · LEARNING",
+        stack="REACT · CLOUDFLARE WORKERS · D1",
+        title="CySec Akademi",
+        lede="A Turkish cybersecurity study site: 105 guided lessons across fundamentals, "
+             "red team, blue team and modern security, plus case labs with a terminal "
+             "simulated in the browser.",
+        link="cysec.aslanlabs.online",
+        shots={t: "live:https://cysec.aslanlabs.online/" for t in THEMES},
+        crop=(40, 0, 1400, 850),
+        specs=[("LESSONS", "105"), ("SOURCE", "CLOSED"), ("STATUS", "LIVE")],
+        live_js="document.documentElement.dataset.theme = '{theme}'",
+        notes=[
+            Note("Progress seal",
+                 "Each lesson is one loop in a four-ring seal, inked when you finish it."),
+            Note("Four pages a lesson",
+                 "The lesson, a deep dive with a worked case, hands-on practice, a check question."),
+            Note("Case labs",
+                 "Short incident briefs worked through in a simulated terminal."),
+        ],
+    ),
+    Project(
+        slug="person-ai", field="SOFTWARE · SELF-HOSTED",
         stack="PYTHON · REACT · SQLITE · OLLAMA",
         title="Person AI",
         lede="A self-hosted character roleplay chat. Make characters or import "
              "SillyTavern cards, pick a cloud or local model, and write the story together.",
         link="github.com/berkaslan7988/Person-AI",
-        shots={t: f"{RAW}/Person-AI/main/docs/screens/characters-{t}.png" for t in THEMES},
-        crop=(350, 0, 1800, 906),
+        shots={t: f"{RAW}/Person-AI/main/docs/screens/landing-{t}.png" for t in THEMES},
+        crop=(200, 20, 1600, 895),
         specs=[("PROVIDERS", "5"), ("SERVER", "STDLIB"), ("REV", "3.0.0")],
         notes=[
-            Note("Characters",
-                 "Personality, scenario, greetings and tags; four starters per account."),
-            Note("Gallery",
-                 "Search, tag filters, sorting and favourites."),
-            Note("Card import",
-                 "Drop SillyTavern V2 cards (.png or .json) anywhere in the window."),
+            Note("The cast",
+                 "Four starter characters; make your own or drop in SillyTavern V2 cards."),
+            Note("Any model",
+                 "Gemini, Groq, DeepSeek and OpenRouter, or a local model through Ollama."),
+            Note("Long-term memory",
+                 "Older messages get summarised, and pinned notes are never forgotten."),
         ],
     ),
     Project(
-        slug="night-fair", no="04", field="SOFTWARE · BROWSER",
+        slug="night-fair", field="SOFTWARE · BROWSER",
         stack="HTML · CSS · JAVASCRIPT",
         title="Night Fair",
         lede="A pocket arcade of 64 mini games: arcade, puzzle, word and board games "
@@ -306,7 +326,7 @@ PROJECTS = [
         kind="strip",
     ),
     Project(
-        slug="optik", no="05", field="SOFTWARE · WEB",
+        slug="optik", field="SOFTWARE · WEB",
         stack="REACT · CLOUDFLARE WORKERS · D1",
         title="Optik",
         lede="A study site for exam week. Bring your questions as JSON or CSV, work "
@@ -333,7 +353,7 @@ PERSON = dict(
     ],
     index_tags={
         "netscope": "WI-FI ANALYZER", "netsentinel": "NETWORK IDS",
-        "person-ai": "ROLEPLAY CHAT", "night-fair": "BROWSER ARCADE", "optik": "STUDY SITE",
+        "cysec": "COURSE", "person-ai": "ROLEPLAY CHAT", "night-fair": "BROWSER ARCADE", "optik": "STUDY SITE",
     },
 )
 
@@ -577,6 +597,12 @@ def main() -> None:
     args = ap.parse_args()
     OUT.mkdir(exist_ok=True)
     projects = [p for p in PROJECTS if p.ready]
+    sheets = 0
+    for i, p in enumerate(projects, 1):
+        p.no = f"{i:02d}"
+        if p.kind == "sheet":
+            p.side = "left" if sheets % 2 == 0 else "right"
+            sheets += 1
     for theme in THEMES:
         files = {f"header-{theme}.svg": header(theme, projects)}
         for p in projects:
