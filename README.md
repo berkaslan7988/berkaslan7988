@@ -3,7 +3,7 @@
   <img alt="Berk Talha Aslan. I build network tools and self-hosted apps, and I like to know how they break. Developer and security student: Information Systems and Technologies, fourth year, Sivas Cumhuriyet University; based in Balıkesir, Türkiye." src="assets/header-light.svg">
 </picture>
 
-I'm a fourth-year Information Systems and Technologies student, splitting my time between writing software and studying security. Lately that means Windows tools that watch networks, a security course in Turkish, and apps that keep your data on your own machine. Each sheet below is a project I keep improving; click one to open it.
+I'm a fourth-year Information Systems and Technologies student, splitting my time between writing software and studying security. Lately that means Windows tools that watch networks, a bilingual security course, and apps that keep your data on your own machine. Each sheet below is a project I keep improving; click one to open it.
 
 <a href="https://github.com/berkaslan7988/NetScope">
 <picture>
@@ -22,7 +22,7 @@ I'm a fourth-year Information Systems and Technologies student, splitting my tim
 <a href="https://cysec.aslanlabs.online">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cysec-dark.svg">
-  <img alt="CySec Akademi, a Turkish cybersecurity study site: 105 guided lessons across fundamentals, red team, blue team and modern security, a four-ring progress seal where each lesson is one loop, and case labs in a simulated terminal. React, Cloudflare Workers, D1. Closed source, live at cysec.aslanlabs.online." src="assets/cysec-light.svg">
+  <img alt="CySec Academy, a cybersecurity study site in Turkish and English: 105 guided lessons across fundamentals, red team, blue team and modern security, a four-ring progress seal where each lesson is one loop, and case labs in a simulated terminal. React, Cloudflare Workers, D1. Closed source, live at cysec.aslanlabs.online." src="assets/cysec-light.svg">
 </picture>
 </a>
 

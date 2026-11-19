@@ -276,15 +276,14 @@ PROJECTS = [
     Project(
         slug="cysec", field="SECURITY · LEARNING",
         stack="REACT · CLOUDFLARE WORKERS · D1",
-        title="CySec Akademi",
-        lede="A Turkish cybersecurity study site: 105 guided lessons across fundamentals, "
-             "red team, blue team and modern security, plus case labs with a terminal "
-             "simulated in the browser.",
+        title="CySec Academy",
+        lede="A cybersecurity study site in Turkish and English: 105 guided lessons across "
+             "fundamentals, red team, blue team and modern security, plus case labs in a "
+             "terminal simulated in the browser.",
         link="cysec.aslanlabs.online",
-        shots={t: "live:https://cysec.aslanlabs.online/" for t in THEMES},
+        shots={t: f"{RAW}/CyberSec-Academy/main/assets/screens/landing-{t}.png" for t in THEMES},
         crop=(40, 0, 1400, 850),
         specs=[("LESSONS", "105"), ("SOURCE", "CLOSED"), ("STATUS", "LIVE")],
-        live_js="document.documentElement.dataset.theme = '{theme}'",
         notes=[
             Note("Progress seal",
                  "Each lesson is one loop in a four-ring seal, inked when you finish it."),
