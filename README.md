@@ -33,13 +33,13 @@ I'm a fourth-year Information Systems and Technologies student, splitting my tim
 </picture>
 </a>
 
-<a href="https://berkaslan7988.github.io/night-fair/">
+<a href="https://nf.aslanlabs.online">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/night-fair-dark.svg">
-  <img alt="Night Fair, a pocket arcade of 64 browser mini games in plain HTML, CSS and JavaScript, in English and Turkish. Click to play." src="assets/night-fair-light.svg">
+  <img alt="Night Fair, a pocket fairground of 68 browser games in English and Turkish: every game is a roll ticket, finished games print a results ticket, three punch-card goals per game, and chess, Turkish draughts, Klondike and Mahjong. React, TypeScript, Cloudflare. Closed source, live at nf.aslanlabs.online." src="assets/night-fair-light.svg">
 </picture>
 </a>
 
-**Toolbox** &nbsp; `Python` `PySide6` `Scapy` `scikit-learn` `PyTorch` · `React` `Vite` `SQLite` · `Rust` · `Cloudflare Workers`
+**Toolbox** &nbsp; `Python` `PySide6` `Scapy` `scikit-learn` `PyTorch` · `React` `TypeScript` `Vite` `SQLite` · `Rust` · `Cloudflare Workers`
 
 [berkaslan7988@gmail.com](mailto:berkaslan7988@gmail.com)

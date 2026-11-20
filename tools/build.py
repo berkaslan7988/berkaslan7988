@@ -313,16 +313,23 @@ PROJECTS = [
         ],
     ),
     Project(
-        slug="night-fair", field="SOFTWARE · BROWSER",
-        stack="HTML · CSS · JAVASCRIPT",
+        slug="night-fair", field="SOFTWARE · BROWSER GAMES",
+        stack="REACT · TYPESCRIPT · CLOUDFLARE",
         title="Night Fair",
-        lede="A pocket arcade of 64 mini games: arcade, puzzle, word and board games "
-             "against bots. No install, no build step, no dependencies. English and Turkish.",
-        link="berkaslan7988.github.io/night-fair",
-        shots={t: "live:https://berkaslan7988.github.io/night-fair/en/" for t in THEMES},
-        crop=(200, 0, 1240, 650),
-        specs=[("GAMES", "64"), ("DEPS", "0")],
-        kind="strip",
+        lede="A pocket fairground of 68 browser games in English and Turkish: arcade, "
+             "puzzles, words, cards, and chess and draughts against a bot. Plays offline.",
+        link="nf.aslanlabs.online",
+        shots={t: f"{RAW}/night-fair/main/assets/screens/midway-{t}.png" for t in THEMES},
+        crop=(40, 0, 1400, 850),
+        specs=[("GAMES", "68"), ("SOURCE", "CLOSED"), ("STATUS", "LIVE")],
+        notes=[
+            Note("Ticket stubs",
+                 "Every game is a roll ticket; a finished game prints a results ticket."),
+            Note("Punch cards",
+                 "Three goals per game, 204 in all, paid in tickets for the Prize Booth."),
+            Note("New booths",
+                 "Chess with four bot levels, Turkish draughts, Klondike and Mahjong."),
+        ],
     ),
     Project(
         slug="optik", field="SOFTWARE · WEB",
