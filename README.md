@@ -5,10 +5,10 @@
 
 I'm a fourth-year Information Systems and Technologies student, splitting my time between writing software and studying security. Lately that means Windows tools that watch networks, a bilingual security course, and apps that keep your data on your own machine. Each sheet below is a project I keep improving; click one to open it.
 
-<a href="https://github.com/berkaslan7988/NetScope">
+<a href="https://cysec.aslanlabs.online">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/netscope-dark.svg">
-  <img alt="NetScope, a Wi-Fi field analyzer for Windows: a spectrum screen of every access point by channel and signal, a four-step security meter with evil-twin and rogue-AP checks, and a readout with a dBm dial. Python, PySide6, WLAN API, SQLite." src="assets/netscope-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/cysec-dark.svg">
+  <img alt="CySec Academy, a cybersecurity study site in Turkish and English: 105 guided lessons across fundamentals, red team, blue team and modern security, a four-ring progress seal where each lesson is one loop, and case labs in a simulated terminal. React, Cloudflare Workers, D1. Closed source, live at cysec.aslanlabs.online." src="assets/cysec-light.svg">
 </picture>
 </a>
 
@@ -19,17 +19,10 @@ I'm a fourth-year Information Systems and Technologies student, splitting my tim
 </picture>
 </a>
 
-<a href="https://cysec.aslanlabs.online">
+<a href="https://optik.aslanlabs.online">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/cysec-dark.svg">
-  <img alt="CySec Academy, a cybersecurity study site in Turkish and English: 105 guided lessons across fundamentals, red team, blue team and modern security, a four-ring progress seal where each lesson is one loop, and case labs in a simulated terminal. React, Cloudflare Workers, D1. Closed source, live at cysec.aslanlabs.online." src="assets/cysec-light.svg">
-</picture>
-</a>
-
-<a href="https://github.com/berkaslan7988/Person-AI">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/person-ai-dark.svg">
-  <img alt="Person AI, a self-hosted character roleplay chat: a landing page with a live demo of the cast, starter characters and SillyTavern card import, cloud or local models, and long-term memory. Python, React, SQLite, Ollama." src="assets/person-ai-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/optik-dark.svg">
+  <img alt="Optik, a study site for exam week in Turkish and English: bring your own question bank as JSON or CSV with lecture notes beside it, practise section by section and retry only your mistakes, then sit timed mock exams with net scoring and a review of every miss. React, Cloudflare Workers, D1. Closed source, live at optik.aslanlabs.online." src="assets/optik-light.svg">
 </picture>
 </a>
 
@@ -37,6 +30,20 @@ I'm a fourth-year Information Systems and Technologies student, splitting my tim
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/night-fair-dark.svg">
   <img alt="Night Fair, a pocket fairground of 68 browser games in English and Turkish: every game is a roll ticket, finished games print a results ticket, three punch-card goals per game, and chess, Turkish draughts, Klondike and Mahjong. React, TypeScript, Cloudflare. Closed source, live at nf.aslanlabs.online." src="assets/night-fair-light.svg">
+</picture>
+</a>
+
+<a href="https://github.com/berkaslan7988/NetScope">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/netscope-dark.svg">
+  <img alt="NetScope, a Wi-Fi field analyzer for Windows: a spectrum screen of every access point by channel and signal, a four-step security meter with evil-twin and rogue-AP checks, and a readout with a dBm dial. Python, PySide6, WLAN API, SQLite." src="assets/netscope-light.svg">
+</picture>
+</a>
+
+<a href="https://github.com/berkaslan7988/Person-AI">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/person-ai-dark.svg">
+  <img alt="Person AI, a self-hosted character roleplay chat: a landing page with a live demo of the cast, starter characters and SillyTavern card import, cloud or local models, and long-term memory. Python, React, SQLite, Ollama." src="assets/person-ai-light.svg">
 </picture>
 </a>
 

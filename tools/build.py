@@ -227,6 +227,7 @@ class Project:
     notes: list[Note] = field(default_factory=list)
     kind: str = "sheet"             # "sheet" (big, with notes) or "strip" (compact, no notes)
     live_js: str = ""               # run on the live page before capture
+    live_init: str = ""             # run before the live page loads (e.g. seed localStorage)
     ready: bool = True              # False keeps it out of the README build
     no: str = ""                    # set from the order of PROJECTS
     side: str = "left"              # set so sheets alternate left/right
@@ -236,22 +237,23 @@ RAW = "https://raw.githubusercontent.com/berkaslan7988"
 
 PROJECTS = [
     Project(
-        slug="netscope", field="SECURITY · WINDOWS DESKTOP",
-        stack="PYTHON · PYSIDE6 · WLAN API · SQLITE",
-        title="NetScope",
-        lede="A Wi-Fi field analyzer. It shows every network in range, the channels "
-             "they fight over, and the ones that put you at risk.",
-        link="github.com/berkaslan7988/NetScope",
-        shots={t: f"{RAW}/NetScope/main/assets/screens/networks-{t}.png" for t in THEMES},
-        crop=(236, 0, 1440, 752),
-        specs=[("TESTS", "65"), ("LICENCE", "MIT"), ("REV", "1.0.0")],
+        slug="cysec", field="SECURITY · LEARNING",
+        stack="REACT · CLOUDFLARE WORKERS · D1",
+        title="CySec Academy",
+        lede="A cybersecurity study site in Turkish and English: 105 guided lessons across "
+             "fundamentals, red team, blue team and modern security, plus case labs in a "
+             "terminal simulated in the browser.",
+        link="cysec.aslanlabs.online",
+        shots={t: f"{RAW}/CyberSec-Academy/main/assets/screens/landing-{t}.png" for t in THEMES},
+        crop=(40, 0, 1400, 850),
+        specs=[("LESSONS", "105"), ("SOURCE", "CLOSED"), ("STATUS", "LIVE")],
         notes=[
-            Note("Spectrum screen",
-                 "Every access point by channel and signal strength."),
-            Note("Security meter",
-                 "Four steps from open to WPA3, plus evil-twin and rogue-AP checks."),
-            Note("Readout",
-                 "A dBm dial, a 60-second trace, and who shares the channel."),
+            Note("Progress seal",
+                 "Each lesson is one loop in a four-ring seal, inked when you finish it."),
+            Note("Four pages a lesson",
+                 "The lesson, a deep dive with a worked case, hands-on practice, a check question."),
+            Note("Case labs",
+                 "Short incident briefs worked through in a simulated terminal."),
         ],
     ),
     Project(
@@ -274,43 +276,24 @@ PROJECTS = [
         ],
     ),
     Project(
-        slug="cysec", field="SECURITY · LEARNING",
+        slug="optik", field="SOFTWARE · EXAM PREP",
         stack="REACT · CLOUDFLARE WORKERS · D1",
-        title="CySec Academy",
-        lede="A cybersecurity study site in Turkish and English: 105 guided lessons across "
-             "fundamentals, red team, blue team and modern security, plus case labs in a "
-             "terminal simulated in the browser.",
-        link="cysec.aslanlabs.online",
-        shots={t: f"{RAW}/CyberSec-Academy/main/assets/screens/landing-{t}.png" for t in THEMES},
-        crop=(40, 0, 1400, 850),
-        specs=[("LESSONS", "105"), ("SOURCE", "CLOSED"), ("STATUS", "LIVE")],
+        title="Optik",
+        lede="A study site for exam week, in Turkish and English. Bring your questions "
+             "as JSON or CSV, work through them section by section, then sit a timed mock exam.",
+        link="optik.aslanlabs.online",
+        shots={t: "live:https://optik.aslanlabs.online/" for t in THEMES},
+        crop=(140, 100, 1300, 825),
+        specs=[("LANGUAGES", "TR + EN"), ("SOURCE", "CLOSED"), ("STATUS", "LIVE")],
         notes=[
-            Note("Progress seal",
-                 "Each lesson is one loop in a four-ring seal, inked when you finish it."),
-            Note("Four pages a lesson",
-                 "The lesson, a deep dive with a worked case, hands-on practice, a check question."),
-            Note("Case labs",
-                 "Short incident briefs worked through in a simulated terminal."),
+            Note("Your own question bank",
+                 "JSON or CSV, multiple choice and open-ended, with notes beside them."),
+            Note("Practice by section",
+                 "Pick sections, retry only your mistakes, answer with the 1–5 or A–E keys."),
+            Note("Timed mock exams",
+                 "Net scoring where 4 or 3 wrong cancel 1 right, then a review of every miss."),
         ],
-    ),
-    Project(
-        slug="person-ai", field="SOFTWARE · SELF-HOSTED",
-        stack="PYTHON · REACT · SQLITE · OLLAMA",
-        title="Person AI",
-        lede="A self-hosted character roleplay chat. Make characters or import "
-             "SillyTavern cards, pick a cloud or local model, and write the story together.",
-        link="github.com/berkaslan7988/Person-AI",
-        shots={t: f"{RAW}/Person-AI/main/docs/screens/landing-{t}.png" for t in THEMES},
-        crop=(200, 20, 1600, 895),
-        specs=[("PROVIDERS", "5"), ("SERVER", "STDLIB"), ("REV", "3.0.0")],
-        notes=[
-            Note("The cast",
-                 "Four starter characters; make your own or drop in SillyTavern V2 cards."),
-            Note("Any model",
-                 "Gemini, Groq, DeepSeek and OpenRouter, or a local model through Ollama."),
-            Note("Long-term memory",
-                 "Older messages get summarised, and pinned notes are never forgotten."),
-        ],
+        live_init="localStorage.setItem('optik:display', JSON.stringify({theme: '{theme}', lang: 'en'}))",
     ),
     Project(
         slug="night-fair", field="SOFTWARE · BROWSER GAMES",
@@ -332,18 +315,42 @@ PROJECTS = [
         ],
     ),
     Project(
-        slug="optik", field="SOFTWARE · WEB",
-        stack="REACT · CLOUDFLARE WORKERS · D1",
-        title="Optik",
-        lede="A study site for exam week. Bring your questions as JSON or CSV, work "
-             "through them section by section, then sit a timed mock exam.",
-        link="optik.aslanlabs.online",
-        shots={t: "live:https://optik.aslanlabs.online/" for t in THEMES},
-        crop=(140, 100, 1300, 825),
-        specs=[("SOURCE", "CLOSED"), ("STATUS", "LIVE")],
-        kind="strip",
-        live_js="document.documentElement.dataset.theme = '{theme}'",
-        ready=False,  # Berk: add Optik after the Night Fair rework
+        slug="netscope", field="SECURITY · WINDOWS DESKTOP",
+        stack="PYTHON · PYSIDE6 · WLAN API · SQLITE",
+        title="NetScope",
+        lede="A Wi-Fi field analyzer. It shows every network in range, the channels "
+             "they fight over, and the ones that put you at risk.",
+        link="github.com/berkaslan7988/NetScope",
+        shots={t: f"{RAW}/NetScope/main/assets/screens/networks-{t}.png" for t in THEMES},
+        crop=(236, 0, 1440, 752),
+        specs=[("TESTS", "65"), ("LICENCE", "MIT"), ("REV", "1.0.0")],
+        notes=[
+            Note("Spectrum screen",
+                 "Every access point by channel and signal strength."),
+            Note("Security meter",
+                 "Four steps from open to WPA3, plus evil-twin and rogue-AP checks."),
+            Note("Readout",
+                 "A dBm dial, a 60-second trace, and who shares the channel."),
+        ],
+    ),
+    Project(
+        slug="person-ai", field="SOFTWARE · SELF-HOSTED",
+        stack="PYTHON · REACT · SQLITE · OLLAMA",
+        title="Person AI",
+        lede="A self-hosted character roleplay chat. Make characters or import "
+             "SillyTavern cards, pick a cloud or local model, and write the story together.",
+        link="github.com/berkaslan7988/Person-AI",
+        shots={t: f"{RAW}/Person-AI/main/docs/screens/landing-{t}.png" for t in THEMES},
+        crop=(200, 20, 1600, 895),
+        specs=[("PROVIDERS", "5"), ("SERVER", "STDLIB"), ("REV", "3.0.0")],
+        notes=[
+            Note("The cast",
+                 "Four starter characters; make your own or drop in SillyTavern V2 cards."),
+            Note("Any model",
+                 "Gemini, Groq, DeepSeek and OpenRouter, or a local model through Ollama."),
+            Note("Long-term memory",
+                 "Older messages get summarised, and pinned notes are never forgotten."),
+        ],
     ),
 ]
 
@@ -359,7 +366,7 @@ PERSON = dict(
     ],
     index_tags={
         "netscope": "WI-FI ANALYZER", "netsentinel": "NETWORK IDS",
-        "cysec": "COURSE", "person-ai": "ROLEPLAY CHAT", "night-fair": "BROWSER ARCADE", "optik": "STUDY SITE",
+        "cysec": "COURSE", "person-ai": "ROLEPLAY CHAT", "night-fair": "BROWSER ARCADE", "optik": "EXAM PREP",
     },
 )
 
@@ -373,7 +380,7 @@ def source(project: Project, theme: str, refresh: bool) -> Path:
     if path.exists() and not refresh:
         return path
     if src.startswith("live:"):
-        capture(src[5:], theme, project.live_js.format(theme=theme), path)
+        capture(src[5:], theme, project.live_js.format(theme=theme), path, project.live_init.replace("{theme}", theme))
     else:
         with urllib.request.urlopen(src, timeout=60) as r:
             path.write_bytes(r.read())
@@ -381,12 +388,14 @@ def source(project: Project, theme: str, refresh: bool) -> Path:
     return path
 
 
-def capture(url: str, theme: str, js: str, path: Path) -> None:
+def capture(url: str, theme: str, js: str, path: Path, init: str = "") -> None:
     from playwright.sync_api import sync_playwright
 
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": 1440, "height": 900}, color_scheme=theme)
+        if init:
+            page.add_init_script(init)
         page.goto(url, wait_until="networkidle")
         if js:
             page.evaluate(js)
