@@ -573,7 +573,9 @@ def header(theme: str, projects: list[Project]) -> str:
     s.line(xr + .5, 46, xr + .5, 248, t["line"])
     xi = xr + 24
     s.text(xi, 62, "SHEETS", "mono", 10, t["faint"], tracking=0.1)
+    # rows tighten as sheets are added, so the last one stays clear of the title block at y = 262
     y = 96
+    step = min(33, (236 - y) / max(1, len(projects) - 1))
     for p in projects:
         tag = PERSON["index_tags"][p.slug]
         s.text(xi, y, p.no, "mono", 10.5, t["red"], tracking=0.06)
@@ -583,7 +585,7 @@ def header(theme: str, projects: list[Project]) -> str:
         s.text(W, y, tag, "mono", 9.5, t["muted"], anchor="end", tracking=0.06)
         s.line(xi + 28 + nw + 8, y - 3.5, W - tw - 8, y - 3.5, t["faint"], 1,
                ' stroke-dasharray="1 4" stroke-linecap="round"')
-        y += 33
+        y += step
 
     # title block
     yb = 262
