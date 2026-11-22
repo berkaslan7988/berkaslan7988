@@ -47,6 +47,13 @@ I'm a fourth-year Information Systems and Technologies student, splitting my tim
 </picture>
 </a>
 
+<a href="https://github.com/berkaslan7988/Firlat">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/firlat-dark.svg">
+  <img alt="Fırlat, file and text sharing across your own Wi-Fi: one computer runs it and phones join from the browser; every parcel is a shipping label with its route, a stencilled type box and a barcode; pair once with a QR code or a 6-digit code; no size limit, resumable downloads and batches as one ZIP. Python standard library, React, Server-Sent Events. MIT licence." src="assets/firlat-light.svg">
+</picture>
+</a>
+
 **Toolbox** &nbsp; `Python` `PySide6` `Scapy` `scikit-learn` `PyTorch` · `React` `TypeScript` `Vite` `SQLite` · `Rust` · `Cloudflare Workers`
 
 [berkaslan7988@gmail.com](mailto:berkaslan7988@gmail.com)

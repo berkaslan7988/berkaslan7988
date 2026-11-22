@@ -352,6 +352,25 @@ PROJECTS = [
                  "Older messages get summarised, and pinned notes are never forgotten."),
         ],
     ),
+    Project(
+        slug="firlat", field="SOFTWARE · LOCAL NETWORK",
+        stack="PYTHON STDLIB · REACT · SSE",
+        title="Fırlat",
+        lede="Send files and text across your own Wi-Fi. One computer runs it, and phones "
+             "and laptops join from the browser: no app, no cloud, no size limit.",
+        link="github.com/berkaslan7988/Firlat",
+        shots={t: f"{RAW}/Firlat/main/assets/screens/board-{t}.png" for t in THEMES},
+        crop=(40, 0, 1400, 850),
+        specs=[("SERVER", "STDLIB"), ("LICENCE", "MIT"), ("REV", "2.0.0")],
+        notes=[
+            Note("Shipping labels",
+                 "Every parcel shows its route, a stencilled type box and a barcode."),
+            Note("Pair once",
+                 "Scan the QR code or type the 6-digit code; the device is remembered."),
+            Note("No size limit",
+                 "Uploads stream to disk, downloads resume, and a batch comes as one ZIP."),
+        ],
+    ),
 ]
 
 PERSON = dict(
@@ -367,6 +386,7 @@ PERSON = dict(
     index_tags={
         "netscope": "WI-FI ANALYZER", "netsentinel": "NETWORK IDS",
         "cysec": "COURSE", "person-ai": "ROLEPLAY CHAT", "night-fair": "BROWSER ARCADE", "optik": "EXAM PREP",
+        "firlat": "LAN FILE DROP",
     },
 )
 
