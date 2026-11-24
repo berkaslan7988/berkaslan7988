@@ -257,6 +257,25 @@ PROJECTS = [
         ],
     ),
     Project(
+        slug="sunless-crown", field="SOFTWARE · GAME",
+        stack="GODOT 4.7 · GDSCRIPT · GLSL",
+        title="Sunless Crown",
+        lede="A top-down roguelite in English and Turkish. Nine procedural floors, three "
+             "Wardens, and a flame-headed knight who is the only warm light in the game.",
+        link="crown.aslanlabs.online",
+        shots={t: f"{RAW}/2d-dungeon-crawler/main/docs/screens/game.png" for t in THEMES},
+        crop=(64, 0, 1216, 720),
+        specs=[("FLOORS", "9"), ("LICENCE", "MIT"), ("REV", "2.0.0")],
+        notes=[
+            Note("Ember light",
+                 "Stone shifts from cold slate to warm brown by light level, dithered between steps."),
+            Note("Drawn in code",
+                 "Every sprite, tile and icon is a text grid in one 32-colour palette."),
+            Note("Three Wardens",
+                 "Bosses on floors 3, 6 and 9, each with two phases and their own lines."),
+        ],
+    ),
+    Project(
         slug="netsentinel", field="SECURITY · MACHINE LEARNING",
         stack="PYTHON · SCAPY · SCIKIT-LEARN · PYTORCH",
         title="NetSentinel",
@@ -334,25 +353,6 @@ PROJECTS = [
         ],
     ),
     Project(
-        slug="person-ai", field="SOFTWARE · SELF-HOSTED",
-        stack="PYTHON · REACT · SQLITE · OLLAMA",
-        title="Person AI",
-        lede="A self-hosted character roleplay chat. Make characters or import "
-             "SillyTavern cards, pick a cloud or local model, and write the story together.",
-        link="github.com/berkaslan7988/Person-AI",
-        shots={t: f"{RAW}/Person-AI/main/docs/screens/landing-{t}.png" for t in THEMES},
-        crop=(200, 20, 1600, 895),
-        specs=[("PROVIDERS", "5"), ("SERVER", "STDLIB"), ("REV", "3.0.0")],
-        notes=[
-            Note("The cast",
-                 "Four starter characters; make your own or drop in SillyTavern V2 cards."),
-            Note("Any model",
-                 "Gemini, Groq, DeepSeek and OpenRouter, or a local model through Ollama."),
-            Note("Long-term memory",
-                 "Older messages get summarised, and pinned notes are never forgotten."),
-        ],
-    ),
-    Project(
         slug="firlat", field="SOFTWARE · LOCAL NETWORK",
         stack="PYTHON STDLIB · REACT · SSE",
         title="Fırlat",
@@ -371,12 +371,31 @@ PROJECTS = [
                  "Uploads stream to disk, downloads resume, and a batch comes as one ZIP."),
         ],
     ),
+    Project(
+        slug="person-ai", field="SOFTWARE · SELF-HOSTED",
+        stack="PYTHON · REACT · SQLITE · OLLAMA",
+        title="Person AI",
+        lede="A self-hosted character roleplay chat. Make characters or import "
+             "SillyTavern cards, pick a cloud or local model, and write the story together.",
+        link="github.com/berkaslan7988/Person-AI",
+        shots={t: f"{RAW}/Person-AI/main/docs/screens/landing-{t}.png" for t in THEMES},
+        crop=(200, 20, 1600, 895),
+        specs=[("PROVIDERS", "5"), ("SERVER", "STDLIB"), ("REV", "3.0.0")],
+        notes=[
+            Note("The cast",
+                 "Four starter characters; make your own or drop in SillyTavern V2 cards."),
+            Note("Any model",
+                 "Gemini, Groq, DeepSeek and OpenRouter, or a local model through Ollama."),
+            Note("Long-term memory",
+                 "Older messages get summarised, and pinned notes are never forgotten."),
+        ],
+    ),
 ]
 
 PERSON = dict(
     name="Berk Talha Aslan",
     dimension="SECURITY  +  SOFTWARE",
-    tagline=("I build network tools and self-hosted apps,", "and I like to know how they break."),
+    tagline=("Security, AI and software development.",),
     block=[
         ("ROLE", "Developer, security"),
         ("STUDY", "Information Systems & Technologies, yr 4"),
@@ -386,7 +405,7 @@ PERSON = dict(
     index_tags={
         "netscope": "WI-FI ANALYZER", "netsentinel": "NETWORK IDS",
         "cysec": "COURSE", "person-ai": "ROLEPLAY CHAT", "night-fair": "BROWSER ARCADE", "optik": "EXAM PREP",
-        "firlat": "LAN FILE DROP",
+        "firlat": "LAN FILE DROP", "sunless-crown": "ROGUELITE",
     },
 )
 
@@ -584,9 +603,13 @@ def header(theme: str, projects: list[Project]) -> str:
     s.raw(f'<path class="dh" d="M{num(a)} {y_dim}l{ah} -3v6z M{num(b)} {y_dim}l-{ah} -3v6z" fill="{t["red"]}"/>')
     s.text(mid, y_dim + 3.8, label, "mono", 10.5, t["red"], anchor="middle", tracking=0.1, cls="dt")
 
-    # tagline
-    s.text(0, 212, PERSON["tagline"][0], "sans", 19, t["ink"])
-    s.text(0, 238, PERSON["tagline"][1], "sans", 19, t["muted"])
+    # tagline: one line sits between the dimension line and the title block
+    lines = PERSON["tagline"]
+    if len(lines) == 1:
+        s.text(0, 226, lines[0], "sans", 19, t["ink"])
+    else:
+        s.text(0, 212, lines[0], "sans", 19, t["ink"])
+        s.text(0, 238, lines[1], "sans", 19, t["muted"])
 
     # sheet index
     xr = 574

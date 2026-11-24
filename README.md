@@ -1,14 +1,21 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img alt="Berk Talha Aslan. I build network tools and self-hosted apps, and I like to know how they break. Developer and security student: Information Systems and Technologies, fourth year, Sivas Cumhuriyet University; based in Balıkesir, Türkiye." src="assets/header-light.svg">
+  <img alt="Berk Talha Aslan. Security, AI and software development. Developer and security student: Information Systems and Technologies, fourth year, Sivas Cumhuriyet University; based in Balıkesir, Türkiye." src="assets/header-light.svg">
 </picture>
 
-I'm a fourth-year Information Systems and Technologies student, splitting my time between writing software and studying security. Lately that means Windows tools that watch networks, a bilingual security course, and apps that keep your data on your own machine. Each sheet below is a project I keep improving; click one to open it.
+I'm an Information Systems and Technologies student, splitting my time between creating software and studying security.
 
 <a href="https://cysec.aslanlabs.online">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/cysec-dark.svg">
   <img alt="CySec Academy, a cybersecurity study site in Turkish and English: 105 guided lessons across fundamentals, red team, blue team and modern security, a four-ring progress seal where each lesson is one loop, and case labs in a simulated terminal. React, Cloudflare Workers, D1. Closed source, live at cysec.aslanlabs.online." src="assets/cysec-light.svg">
+</picture>
+</a>
+
+<a href="https://crown.aslanlabs.online">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/sunless-crown-dark.svg">
+  <img alt="Sunless Crown, a top-down roguelite made in Godot 4.7, in English and Turkish: nine procedural floors lit only by the player's flame, stone that shifts from cold slate to warm brown by light level, every sprite and tile drawn in code from one 32-colour palette, and three Wardens on floors 3, 6 and 9. Godot, GDScript, GLSL. MIT licence, playable at crown.aslanlabs.online." src="assets/sunless-crown-light.svg">
 </picture>
 </a>
 
@@ -40,13 +47,6 @@ I'm a fourth-year Information Systems and Technologies student, splitting my tim
 </picture>
 </a>
 
-<a href="https://github.com/berkaslan7988/Person-AI">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/person-ai-dark.svg">
-  <img alt="Person AI, a self-hosted character roleplay chat: a landing page with a live demo of the cast, starter characters and SillyTavern card import, cloud or local models, and long-term memory. Python, React, SQLite, Ollama." src="assets/person-ai-light.svg">
-</picture>
-</a>
-
 <a href="https://github.com/berkaslan7988/Firlat">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/firlat-dark.svg">
@@ -54,6 +54,13 @@ I'm a fourth-year Information Systems and Technologies student, splitting my tim
 </picture>
 </a>
 
-**Toolbox** &nbsp; `Python` `PySide6` `Scapy` `scikit-learn` `PyTorch` · `React` `TypeScript` `Vite` `SQLite` · `Rust` · `Cloudflare Workers`
+<a href="https://github.com/berkaslan7988/Person-AI">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/person-ai-dark.svg">
+  <img alt="Person AI, a self-hosted character roleplay chat: a landing page with a live demo of the cast, starter characters and SillyTavern card import, cloud or local models, and long-term memory. Python, React, SQLite, Ollama." src="assets/person-ai-light.svg">
+</picture>
+</a>
+
+**Toolbox** &nbsp; `Python` `PySide6` `Scapy` `scikit-learn` `PyTorch` · `React` `TypeScript` `Vite` `SQLite` · `Rust` · `Godot` `GDScript` · `Cloudflare Workers`
 
 [berkaslan7988@gmail.com](mailto:berkaslan7988@gmail.com)
