@@ -40,6 +40,13 @@ I'm an Information Systems and Technologies student, splitting my time between c
 </picture>
 </a>
 
+<a href="https://github.com/berkaslan7988/Caki">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/caki-dark.svg">
+  <img alt="Çakı, a security toolkit for the terminal: eleven small tools in one Textual app and one command, caki. Every screen shows the exact command it runs; port scans read service banners and check them against local CVE rules that end in a next step; phishing checks name their evidence. Python, Textual, asyncio. MIT licence, 96 tests." src="assets/caki-light.svg">
+</picture>
+</a>
+
 <a href="https://github.com/berkaslan7988/NetScope">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/netscope-dark.svg">
@@ -61,6 +68,6 @@ I'm an Information Systems and Technologies student, splitting my time between c
 </picture>
 </a>
 
-**Toolbox** &nbsp; `Python` `PySide6` `Scapy` `scikit-learn` `PyTorch` · `React` `TypeScript` `Vite` `SQLite` · `Rust` · `Godot` `GDScript` · `Cloudflare Workers`
+**Toolbox** &nbsp; `Python` `PySide6` `Textual` `Scapy` `scikit-learn` `PyTorch` · `React` `TypeScript` `Vite` `SQLite` · `Rust` · `Godot` `GDScript` · `Cloudflare Workers`
 
 [berkaslan7988@gmail.com](mailto:berkaslan7988@gmail.com)

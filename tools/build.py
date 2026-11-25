@@ -334,6 +334,25 @@ PROJECTS = [
         ],
     ),
     Project(
+        slug="caki", field="SECURITY · TERMINAL TOOLKIT",
+        stack="PYTHON · TEXTUAL · ASYNCIO",
+        title="Çakı",
+        lede="A pocket knife for everyday security work: eleven small tools in one terminal "
+             "app and one command, from port and site checks to log review and phishing.",
+        link="github.com/berkaslan7988/Caki",
+        shots={t: f"{RAW}/Caki/main/docs/screens/ports-{t}.png" for t in THEMES},
+        crop=(380, 64, 1951, 1046),
+        specs=[("TESTS", "96"), ("LICENCE", "MIT"), ("REV", "1.0.0")],
+        notes=[
+            Note("Shows its command",
+                 "Every screen shows the exact CLI command it runs; c copies it."),
+            Note("Findings say what to do",
+                 "Banners checked against local CVE rules, each ending in a next step."),
+            Note("Explains, not just scores",
+                 "Phishing signals name their evidence; odd traffic names the value."),
+        ],
+    ),
+    Project(
         slug="netscope", field="SECURITY · WINDOWS DESKTOP",
         stack="PYTHON · PYSIDE6 · WLAN API · SQLITE",
         title="NetScope",
@@ -405,7 +424,7 @@ PERSON = dict(
     index_tags={
         "netscope": "WI-FI ANALYZER", "netsentinel": "NETWORK IDS",
         "cysec": "COURSE", "person-ai": "ROLEPLAY CHAT", "night-fair": "BROWSER ARCADE", "optik": "EXAM PREP",
-        "firlat": "LAN FILE DROP", "sunless-crown": "ROGUELITE",
+        "firlat": "LAN FILE DROP", "sunless-crown": "ROGUELITE", "caki": "SECURITY TOOLKIT",
     },
 )
 
